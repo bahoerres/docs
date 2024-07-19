@@ -9,6 +9,6 @@ tags: [servers,lenovo,intel,tp-link] # TAG names should always be lower case
 
 Lorem ipsum
 
-### MOAR!!
+### MOAR
 
-### MoreMoreMore!
+### MoreMoreMore
