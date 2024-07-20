@@ -37,24 +37,24 @@ The two callouts that are displayed side by side are actually encapsulated by an
 
 This is what it looks like in the note:
 
-```css
- [!even-columns]
-
-  [!abstract] About
- 
-  - Type: #book/nonfiction
-  - [Author:: [[Cal Newport]]]
-  - [pages:: 305]
-  - [ddc:: 650.1]
-  - [Year published:: [[2012]]]
-
-  [!bookinfo] Reading
- 
-  - [status:: read]
-  - [rating:: 4.75]
-  - [added:: 2022-10-29]
-  - [started:: 2022-10-29]
-  - [read:: 2022-10-29]
+```md
+> [!even-columns]
+>
+> > [!abstract] About
+> >
+> > - Type: #book/nonfiction
+> > - [Author:: [[Cal Newport]]]
+> > - [pages:: 305]
+> > - [ddc:: 650.1]
+> > - [Year published:: [[2012]]]
+>
+> > [!bookinfo] Reading
+> >
+> > - [status:: read]
+> > - [rating:: 4.75]
+> > - [added:: 2022-10-29]
+> > - [started:: 2022-10-29]
+> > - [read:: 2022-10-29]
 ```
 
 A [CSS snippet](https://help.obsidian.md/How+to/Add+custom+styles#Use+Themes+and+or+CSS+snippets) in Obsidian applies the styling.
@@ -87,7 +87,7 @@ What we are using here is a CSS property called `grid`. You can read more about 
 
 The great thing about `grid` is that it is really flexible. Each new line in our callout automatically moves into a new column.
 
-```css
+```md
  [!even-columns]
  left
 
