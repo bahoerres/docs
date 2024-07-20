@@ -1,5 +1,5 @@
 ---
-title: Setting up a Documentation Site with Jekyll and Github Pages
+title: Arranging Obsidian content in columns without any plugins
 date: 2024-07-19 16:20:42 -0500
 categories: [homelab,hardware]
 tags: [servers,lenovo,intel,tp-link] # TAG names should always be lower case
@@ -37,48 +37,48 @@ The two callouts that are displayed side by side are actually encapsulated by an
 
 This is what it looks like in the note:
 
-```code
-<span><span>&gt; [</span><span>!even-columns</span><span>]</span></span>
-<span><span>&gt;</span></span>
-<span><span>&gt; &gt; [</span><span>!abstract</span><span>] About</span></span>
-<span><span>&gt; &gt;</span></span>
-<span><span>&gt; &gt; - Type: #book/nonfiction</span></span>
-<span><span>&gt; &gt; - [Author:: [[Cal Newport]]]</span></span>
-<span><span>&gt; &gt; - [pages:: 305]</span></span>
-<span><span>&gt; &gt; - [ddc:: 650.1]</span></span>
-<span><span>&gt; &gt; - [Year published:: [[</span><span>2012</span><span>]]]</span></span>
-<span><span>&gt;</span></span>
-<span><span>&gt; &gt; [</span><span>!bookinfo</span><span>] Reading</span></span>
-<span><span>&gt; &gt;</span></span>
-<span><span>&gt; &gt; - [status:: read]</span></span>
-<span><span>&gt; &gt; - [rating:: 4.75]</span></span>
-<span><span>&gt; &gt; - [added:: 2022-10-29]</span></span>
-<span><span>&gt; &gt; - [started:: 2022-10-29]</span></span>
-<span><span>&gt; &gt; - [read:: 2022-10-29]</span></span>
+```css
+&gt; [!even-columns]
+&gt;
+&gt; &gt; [!abstract] About
+&gt; &gt;
+&gt; &gt; - Type: #book/nonfiction
+&gt; &gt; - [Author:: [[Cal Newport]]]
+&gt; &gt; - [pages:: 305]
+&gt; &gt; - [ddc:: 650.1]
+&gt; &gt; - [Year published:: [[2012]]]
+&gt;
+&gt; &gt; [!bookinfo] Reading
+&gt; &gt;
+&gt; &gt; - [status:: read]
+&gt; &gt; - [rating:: 4.75]
+&gt; &gt; - [added:: 2022-10-29]
+&gt; &gt; - [started:: 2022-10-29]
+&gt; &gt; - [read:: 2022-10-29]
 ```
 
 A [CSS snippet](https://help.obsidian.md/How+to/Add+custom+styles#Use+Themes+and+or+CSS+snippets) in Obsidian applies the styling.
 
 `.obsidian/snippets/callouts.css`:
 
-```code
-<span><span>/* Even columns */</span></span>
-<span><span>.callout</span><span>[</span><span>data-callout</span><span>=</span><span>"even-columns"</span><span>] {</span></span>
-<span><span>  /* Removes padding and background colour from the container */</span></span>
-<span><span>  padding</span><span>:</span><span> 0</span><span>;</span></span>
-<span><span>  background-color</span><span>:</span><span> transparent</span><span>;</span></span>
-<span><span>}</span></span>
-<span><span>.callout</span><span>[</span><span>data-callout</span><span>=</span><span>"even-columns"</span><span>] </span><span>&gt;</span><span> .callout-content</span><span> {</span></span>
-<span><span>  /* Arranges the content in columns */</span></span>
-<span><span>  display</span><span>:</span><span> grid</span><span>;</span></span>
-<span><span>  /* minmax sets the minimum width of a column. Make the columns 'skinnier' by setting 15rem to a smaller number */</span></span>
-<span><span>  grid-template-columns</span><span>:</span><span> repeat</span><span>(auto-fit</span><span>,</span><span> minmax</span><span>(15</span><span>rem</span><span>,</span><span> 1</span><span>fr</span><span>))</span><span>;</span></span>
-<span><span>  gap</span><span>:</span><span> 12</span><span>px</span><span>;</span></span>
-<span><span>}</span></span>
-<span><span>.callout</span><span>[</span><span>data-callout</span><span>=</span><span>"even-columns"</span><span>] </span><span>&gt;</span><span> .callout-title</span><span> {</span></span>
-<span><span>  /* Hides the callout title */</span></span>
-<span><span>  display</span><span>:</span><span> none</span><span>;</span></span>
-<span><span>}</span></span>
+```css
+/* Even columns */
+.callout[data-callout="even-columns"] {
+  /* Removes padding and background colour from the container */
+  padding: 0;
+  background-color: transparent;
+}
+.callout[data-callout="even-columns"] &gt; .callout-content {
+  /* Arranges the content in columns */
+  display: grid;
+  /* minmax sets the minimum width of a column. Make the columns 'skinnier' by setting 15rem to a smaller number */
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 12px;
+}
+.callout[data-callout="even-columns"] &gt; .callout-title {
+  /* Hides the callout title */
+  display: none;
+}
 ```
 
 That’s it! Simply copy the above code into your snippets folder and activate it. Anytime you add a callout with the name `even-columns`, the content inside is arrange in, well, even columns.
@@ -87,13 +87,13 @@ What we are using here is a CSS property called `grid`. You can read more about 
 
 The great thing about `grid` is that it is really flexible. Each new line in our callout automatically moves into a new column.
 
-```code
-<span><span>&gt; [</span><span>!even-columns</span><span>]</span></span>
-<span><span>&gt; left</span></span>
-<span><span>&gt;</span></span>
-<span><span>&gt; center</span></span>
-<span><span>&gt;</span></span>
-<span><span>&gt; right</span></span>
+```css
+&gt; [!even-columns]
+&gt; left
+&gt;
+&gt; center
+&gt;
+&gt; right
 ```
 
 ![Three columns in an Obsidian note.](https://joschua.io/_astro/6-three.9861c745_ZVkmth.webp)
