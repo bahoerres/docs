@@ -38,23 +38,23 @@ The two callouts that are displayed side by side are actually encapsulated by an
 This is what it looks like in the note:
 
 ```css
-&gt; [!even-columns]
-&gt;
-&gt; &gt; [!abstract] About
-&gt; &gt;
-&gt; &gt; - Type: #book/nonfiction
-&gt; &gt; - [Author:: [[Cal Newport]]]
-&gt; &gt; - [pages:: 305]
-&gt; &gt; - [ddc:: 650.1]
-&gt; &gt; - [Year published:: [[2012]]]
-&gt;
-&gt; &gt; [!bookinfo] Reading
-&gt; &gt;
-&gt; &gt; - [status:: read]
-&gt; &gt; - [rating:: 4.75]
-&gt; &gt; - [added:: 2022-10-29]
-&gt; &gt; - [started:: 2022-10-29]
-&gt; &gt; - [read:: 2022-10-29]
+ [!even-columns]
+
+  [!abstract] About
+ 
+  - Type: #book/nonfiction
+  - [Author:: [[Cal Newport]]]
+  - [pages:: 305]
+  - [ddc:: 650.1]
+  - [Year published:: [[2012]]]
+
+  [!bookinfo] Reading
+ 
+  - [status:: read]
+  - [rating:: 4.75]
+  - [added:: 2022-10-29]
+  - [started:: 2022-10-29]
+  - [read:: 2022-10-29]
 ```
 
 A [CSS snippet](https://help.obsidian.md/How+to/Add+custom+styles#Use+Themes+and+or+CSS+snippets) in Obsidian applies the styling.
@@ -68,14 +68,14 @@ A [CSS snippet](https://help.obsidian.md/How+to/Add+custom+styles#Use+Themes+and
   padding: 0;
   background-color: transparent;
 }
-.callout[data-callout="even-columns"] &gt; .callout-content {
+.callout[data-callout="even-columns"]  .callout-content {
   /* Arranges the content in columns */
   display: grid;
   /* minmax sets the minimum width of a column. Make the columns 'skinnier' by setting 15rem to a smaller number */
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 12px;
 }
-.callout[data-callout="even-columns"] &gt; .callout-title {
+.callout[data-callout="even-columns"]  .callout-title {
   /* Hides the callout title */
   display: none;
 }
@@ -88,12 +88,12 @@ What we are using here is a CSS property called `grid`. You can read more about 
 The great thing about `grid` is that it is really flexible. Each new line in our callout automatically moves into a new column.
 
 ```css
-&gt; [!even-columns]
-&gt; left
-&gt;
-&gt; center
-&gt;
-&gt; right
+ [!even-columns]
+ left
+
+ center
+
+ right
 ```
 
 ![Three columns in an Obsidian note.](https://joschua.io/_astro/6-three.9861c745_ZVkmth.webp)
