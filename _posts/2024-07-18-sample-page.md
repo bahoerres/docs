@@ -20,18 +20,18 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 > When something is important enough, you do it even if the odds are not in your favor.
 
 ```javascript
-<span>// Javascript code with syntax highlighting.</span>
-<span>var</span> <span>fun</span> <span>=</span> <span>function</span> <span>lang</span><span>(</span><span>l</span><span>)</span> <span>{</span>
-  <span>dateformat</span><span>.</span><span>i18n</span> <span>=</span> <span>require</span><span>(</span><span>'</span><span>./lang/</span><span>'</span> <span>+</span> <span>l</span><span>)</span>
-  <span>return</span> <span>true</span><span>;</span>
-<span>}</span>
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l)
+  return true;
+}
 ```
 
 ```ruby
-<span># Ruby code with syntax highlighting</span>
-<span>GitHubPages</span><span>::</span><span>Dependencies</span><span>.</span><span>gems</span><span>.</span><span>each</span> <span>do</span> <span>|</span><span>gem</span><span>,</span> <span>version</span><span>|</span>
-  <span>s</span><span>.</span><span>add_dependency</span><span>(</span><span>gem</span><span>,</span> <span>"= </span><span>#{</span><span>version</span><span>}</span><span>"</span><span>)</span>
-<span>end</span>
+# Ruby code with syntax highlighting
+GitHubPages::Dependencies.gems.each do |gem, version|
+  s.add_dependency(gem, "= #{version}")
+end
 ```
 
 - This is an unordered list following a header.
