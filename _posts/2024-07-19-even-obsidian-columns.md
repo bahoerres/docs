@@ -1,8 +1,8 @@
 ---
 title: Arranging Obsidian content in columns without any plugins
 date: 2024-07-19 16:20:42 -0500
-categories: [homelab,hardware]
-tags: [servers,lenovo,intel,tp-link] # TAG names should always be lower case
+categories: [howto,obsidian]
+tags: [notes,css,obsidian,styles] # TAG names should always be lower case
 ---
 
 _tldr: Jump straight to the [implementation](https://joschua.io/posts/2022/12/04/obsidian-grid-callouts/#implementation)._
