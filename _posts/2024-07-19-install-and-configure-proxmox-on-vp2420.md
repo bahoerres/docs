@@ -1,8 +1,8 @@
 ---
-title: Hello Homelab
+title: Installing And Configuring Proxmox on a Protectli VP2420 for Network Management
 date: 2024-07-19 16:26:00 -0500
-categories: [homelab,hardware]
-tags: [servers,lenovo,intel,tp-link] # TAG names should always be lower case
+categories: [featured,homelab]
+tags: [servers,networking,setup,guides] # TAG names should always be lower case
 ---
 
 ## Hello Homelab
