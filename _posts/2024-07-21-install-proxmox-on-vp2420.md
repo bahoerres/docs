@@ -1,5 +1,5 @@
 ---
-title: Homelab Origins: Installing and Configuring Proxmox on a Protectli VP2420
+title: Homelab Origins -Installing and Configuring Proxmox on a Protectli VP2420
 date: 2024-07-21 13:12:13 -0500
 categories: [featured,homelab]
 tags: [server,hardware,setup]     # TAG names should always be lowercase
